@@ -3,6 +3,10 @@
 	import { onMount } from 'svelte';
 	import { cartCount, selectedLanguage } from '@/routes/store';
 
+	// 	onMount(async () => {
+	//     const res = await fetch('https://fakestoreapi.com/products');
+	//     products = await res.json();
+	//   });
 	let searchQuery = '';
 
 	const handleSearch = () => {
@@ -16,16 +20,19 @@
 	let count;
 	let language;
 
-	$: count = $cartCount; // Количество товаров в корзине
-	$: language = $selectedLanguage; // Текущий язык
+	$: count = $cartCount;
+	$: language = $selectedLanguage;
 
-	function handleLanguageChange(event) {
-		selectedLanguage.set(event.target.value);
+	function handleLanguageChange(event: Event) {
+		const target = event.target as HTMLSelectElement;
+		selectedLanguage.set(target.value);
 	}
 </script>
 
 <div class="header-wrapper">
-	<header class="flex w-full flex-row flex-nowrap items-center justify-between gap-4">
+	<header
+		class="mx-auto flex max-w-[1200px] flex-row flex-nowrap items-center justify-between gap-4"
+	>
 		<span>
 			<img src={logo} alt="Logo" />
 		</span>
@@ -42,13 +49,13 @@
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
 					viewBox="0 0 24 24"
-					strokeWidth={1.5}
+					stroke-width="1.5"
 					stroke="currentColor"
 					class="h-6 w-6"
 				>
 					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
+						stroke-linecap="round"
+						stroke-linejoin="round"
 						d="M15.75 15.75 21 21m-5.25-5.25a6.75 6.75 0 1 0-9.5 0 6.75 6.75 0 0 0 9.5 0Z"
 					/>
 				</svg>
