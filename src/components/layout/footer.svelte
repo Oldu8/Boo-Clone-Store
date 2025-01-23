@@ -2,10 +2,9 @@
 </script>
 
 <div class="footer-wrapper bg-dark py-8 text-white">
-	<footer class="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
-		<!-- Социальные сети -->
+	<footer class="container mx-auto flex max-w-[1200px] grid-cols-1 gap-8 md:grid-cols-4">
 		<div class="flex flex-col space-y-4">
-			<h3 class="text-lg font-bold">Соцмережі</h3>
+			<h3 class="text-lg font-bold">Social networks</h3>
 			<a href="#" class="flex items-center space-x-2">
 				<span>📱</span> <span>Viber</span>
 			</a>
@@ -20,12 +19,10 @@
 			</a>
 		</div>
 
-		<!-- Подписка -->
 		<div>
-			<h3 class="text-lg font-bold">Підписка на оновлення</h3>
+			<h3 class="text-lg font-bold">Subscribe</h3>
 			<p class="text-sm text-gray-400">
-				Підпишіться на наші оновлення, щоб завчасно отримувати інформацію про надходження нових
-				товарів, вигідних пропозицій та акцій.
+				Subscribe to our newsletter to get the latest news and updates
 			</p>
 			<form class="mt-4 flex">
 				<div class="relative flex-1">
@@ -44,31 +41,21 @@
 				</button>
 			</form>
 		</div>
-
-		<!-- Навигация -->
-		<div class="flex flex-col md:col-span-2 md:flex-row md:justify-between">
-			<div>
-				<ul class="space-y-2">
-					<li><a href="#" class="text-sm hover:underline">Про нас</a></li>
-					<li><a href="#" class="text-sm hover:underline">Контакти</a></li>
-					<li><a href="#" class="text-sm hover:underline">Повернення та гарантія</a></li>
-					<li><a href="#" class="text-sm hover:underline">Новини та акції</a></li>
-				</ul>
-			</div>
-			<div>
-				<ul class="space-y-2">
-					<li><a href="#" class="text-sm hover:underline">Стати партнером</a></li>
-					<li><a href="#" class="text-sm hover:underline">Користувацька угода</a></li>
-					<li><a href="#" class="text-sm hover:underline">Оплата та доставка</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- Копирайт -->
-		<div class="col-span-3 text-center text-sm text-gray-400 md:text-left">
-			© 2018–2024 BOO!UA інтернет-магазин надійних б/у товарів
-		</div>
+		<ul class="space-y-2">
+			<li><a href="#" class="text-sm hover:underline">About us</a></li>
+			<li><a href="#" class="text-sm hover:underline">Contacts</a></li>
+			<li><a href="#" class="text-sm hover:underline">FAQ</a></li>
+			<li><a href="#" class="text-sm hover:underline">News</a></li>
+		</ul>
+		<ul class="space-y-2">
+			<li><a href="#" class="text-sm hover:underline">Become a seller</a></li>
+			<li><a href="#" class="text-sm hover:underline">Privacy Policy</a></li>
+			<li><a href="#" class="text-sm hover:underline">Terms & Conditions</a></li>
+		</ul>
 	</footer>
+	<div class="mx-auto mt-4 flex max-w-[1200px] text-left text-sm text-gray-400">
+		© 2018-2025 BOO!CLONE All rights reserved
+	</div>
 </div>
 
 <style>
