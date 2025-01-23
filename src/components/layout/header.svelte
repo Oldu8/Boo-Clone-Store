@@ -130,7 +130,9 @@
 		top: 0;
 		z-index: 100;
 		padding: 35px;
-		border-bottom: 1px solid #73cca8;
+		box-shadow:
+			0 7px 20px 0 rgb(0 0 0 / 20%),
+			0 4px 10px 0 rgb(0 0 0 / 20%);
 		background: white;
 	}
 
