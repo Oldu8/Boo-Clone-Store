@@ -26,7 +26,6 @@
 		{ img: SlideImg6, link: '/promo_6' }
 	];
 
-	// Initialize Swiper after DOM is mounted
 	onMount(() => {
 		swiper = new Swiper('.swiper', {
 			modules: [Navigation, Pagination],
@@ -40,6 +39,24 @@
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10
+				},
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 30
+				},
+				1024: {
+					slidesPerView: 4,
+					spaceBetween: 40
+				}
 			}
 		});
 	});
@@ -47,7 +64,6 @@
 
 <div class="slider-wrapper">
 	<div class="swiper">
-		<!-- Swiper Wrapper -->
 		<div class="swiper-wrapper">
 			{#each slides as slide}
 				<div class="swiper-slide">
@@ -68,6 +84,13 @@
 </div>
 
 <style>
+	.swiper-button-prev::after,
+	.swiper-button-next::after {
+		font-size: 28px;
+		font-weight: 800;
+		color: var(bg-blue-300);
+	}
+
 	.slider-wrapper {
 		width: 100%;
 		max-width: 1200px;
@@ -83,5 +106,30 @@
 		width: 100%;
 		height: auto;
 		object-fit: cover;
+	}
+
+	/* Optional: Add media queries for extra control */
+	@media (max-width: 768px) {
+		.slider-wrapper {
+			max-width: 736px;
+			padding: 0 10px;
+		}
+
+		.swiper-button-prev::after,
+		.swiper-button-next::after {
+			font-size: 20px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.slider-wrapper {
+			padding: 0 5px;
+			max-width: 343px;
+		}
+
+		.swiper-button-prev::after,
+		.swiper-button-next::after {
+			font-size: 18px;
+		}
 	}
 </style>
