@@ -36,7 +36,7 @@
 						<img
 							src={item.imagePreview}
 							alt={item.name}
-							class="mb-4 h-40 w-40 rounded-lg object-cover"
+							class="mb-4 h-40 w-40 rounded-lg object-contain"
 						/>
 						<h3 class="mb-auto text-center text-sm font-semibold sm:text-lg">
 							{item.name.length > 100 ? `${item.name.substring(0, 40)}...` : item.name}
