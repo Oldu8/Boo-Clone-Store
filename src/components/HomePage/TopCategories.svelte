@@ -28,7 +28,9 @@
 	});
 
 	onDestroy(() => {
-		window.removeEventListener('resize', checkScreenSize);
+		if (typeof window !== 'undefined') {
+			window?.removeEventListener('resize', checkScreenSize);
+		}
 	});
 </script>
 

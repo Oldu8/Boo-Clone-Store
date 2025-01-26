@@ -79,7 +79,6 @@
 	.item-card img {
 		width: 100%;
 		height: 10rem;
-		object-fit: cover;
 		border-radius: 0.5rem;
 	}
 

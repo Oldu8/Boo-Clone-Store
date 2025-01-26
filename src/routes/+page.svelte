@@ -9,5 +9,4 @@
 	<div class="py-4 md:py-12"></div>
 	<TopCategories />
 	<TopItems />
-	<div>promo</div>
 </div>

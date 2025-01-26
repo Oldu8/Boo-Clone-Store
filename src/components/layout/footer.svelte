@@ -1,20 +1,22 @@
 <script lang="ts">
 </script>
 
-<div class="footer-wrapper bg-dark py-8 text-white">
-	<footer class="container mx-auto flex max-w-[1200px] grid-cols-1 gap-8 md:grid-cols-4">
+<div class="footer-wrapper">
+	<footer
+		class="container mx-auto grid grid-cols-1 gap-8 px-4 py-4 md:max-w-[1200px] md:grid-cols-4 md:px-0"
+	>
 		<div class="flex flex-col space-y-4">
 			<h3 class="text-lg font-bold">Social networks</h3>
-			<a href="#" class="flex items-center space-x-2">
+			<a href="/" class="flex items-center space-x-2">
 				<span>📱</span> <span>Viber</span>
 			</a>
-			<a href="#" class="flex items-center space-x-2">
+			<a href="/" class="flex items-center space-x-2">
 				<span>✈️</span> <span>Telegram</span>
 			</a>
-			<a href="#" class="flex items-center space-x-2">
+			<a href="/" class="flex items-center space-x-2">
 				<span>📘</span> <span>Facebook</span>
 			</a>
-			<a href="#" class="flex items-center space-x-2">
+			<a href="/" class="flex items-center space-x-2">
 				<span>📷</span> <span>Instagram</span>
 			</a>
 		</div>
@@ -42,19 +44,21 @@
 			</form>
 		</div>
 		<ul class="space-y-2">
-			<li><a href="#" class="text-sm hover:underline">About us</a></li>
-			<li><a href="#" class="text-sm hover:underline">Contacts</a></li>
-			<li><a href="#" class="text-sm hover:underline">FAQ</a></li>
-			<li><a href="#" class="text-sm hover:underline">News</a></li>
+			<li><a href="/" class="text-sm hover:underline">About us</a></li>
+			<li><a href="/" class="text-sm hover:underline">Contacts</a></li>
+			<li><a href="/" class="text-sm hover:underline">FAQ</a></li>
+			<li><a href="/" class="text-sm hover:underline">News</a></li>
 		</ul>
 		<ul class="space-y-2">
-			<li><a href="#" class="text-sm hover:underline">Become a seller</a></li>
-			<li><a href="#" class="text-sm hover:underline">Privacy Policy</a></li>
-			<li><a href="#" class="text-sm hover:underline">Terms & Conditions</a></li>
+			<li><a href="/" class="text-sm hover:underline">Become a seller</a></li>
+			<li><a href="/" class="text-sm hover:underline">Privacy Policy</a></li>
+			<li><a href="/" class="text-sm hover:underline">Terms & Conditions</a></li>
 		</ul>
 	</footer>
-	<div class="mx-auto mt-4 flex max-w-[1200px] text-left text-sm text-gray-400">
-		© 2018-2025 BOO!CLONE All rights reserved
+	<div
+		class="mx-auto mt-4 flex px-4 py-4 text-left text-sm text-gray-400 md:max-w-[1200px] md:px-0"
+	>
+		© 2018-2025 BOO!CLONE All rights not reserved
 	</div>
 </div>
 
