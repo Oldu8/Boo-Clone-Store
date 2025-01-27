@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumbs from '@/components/UI/Breadcrumbs.svelte';
 	import type { Catalog } from '@/types/Catalog/catalog';
 	import { onMount } from 'svelte';
 
@@ -37,7 +38,7 @@
 </script>
 
 <div class="py-4">
-	<div>breadcrumbs</div>
+	<Breadcrumbs basePath="/" />
 	<div class="pt-4">
 		<h2 class="mb-6 text-center text-2xl font-bold sm:text-3xl">Catalog</h2>
 		<div class="grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-4">
