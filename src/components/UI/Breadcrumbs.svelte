@@ -4,10 +4,17 @@
 	export let separator: string = '/';
 	export let basePath: string = '';
 
+	// New prop: allow passing breadcrumb items manually
+	export let items: { name: string; path: string }[] = [];
+
 	let breadcrumbs: { name: string; path: string }[] = [];
 
-	// Parse URL and generate breadcrumbs
 	const generateBreadcrumbs = () => {
+		if (items.length > 0) {
+			breadcrumbs = items;
+			return;
+		}
+
 		const path = window.location.pathname.replace(basePath, '');
 		const segments = path.split('/').filter(Boolean);
 

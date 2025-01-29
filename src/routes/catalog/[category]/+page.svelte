@@ -4,7 +4,10 @@
 
 	export let data: { title: string; description: string; categoryData: Catalog };
 
-	console.log(data.categoryData);
+	const breadcrumbItems = [
+		{ name: 'Catalog', path: '/catalog' },
+		{ name: data.categoryData?.name || 'Loading...', path: `/catalog/${data.categoryData?.slug}` }
+	];
 </script>
 
 <svelte:head>
@@ -15,7 +18,7 @@
 </svelte:head>
 
 <div class="py-4">
-	<Breadcrumbs basePath="/" />
+	<Breadcrumbs basePath="/" items={breadcrumbItems} />
 	<div class="pt-4">
 		<h2 class="mb-6 text-center text-2xl font-bold sm:text-3xl">{data.categoryData?.metaTitle}</h2>
 		{#if data.categoryData}
