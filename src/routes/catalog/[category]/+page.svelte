@@ -36,7 +36,7 @@
 						<div class="grid grid-cols-2 gap-1 md:grid-cols-4 md:gap-4">
 							{#if category.children.length > 0}
 								{#each category.children as item}
-									<CatalogCard {item} />
+									<CatalogCard {item} category={`${data.categoryData.slug}/${category.slug}`} />
 								{/each}
 							{/if}
 						</div>
