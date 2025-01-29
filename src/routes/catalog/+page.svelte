@@ -35,7 +35,19 @@
 			console.error('Error fetching catalog list:', error);
 		}
 	});
+
+	export let data: { title: string; description: string } = {
+		title: 'Default Title',
+		description: 'Default Description'
+	};
 </script>
+
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name="description" content={data.description} />
+	<meta property="og:title" content={data.title} />
+	<meta property="og:description" content={data.description} />
+</svelte:head>
 
 <div class="py-4">
 	<Breadcrumbs basePath="/" />
@@ -49,14 +61,16 @@
 				<div
 					class="item-card flex cursor-pointer flex-col items-center justify-end rounded-lg bg-white p-4 shadow-md transition-transform hover:scale-105"
 				>
-					<img
-						src={`https://back.boo.ua/${item.imageMain}`}
-						alt={item.name}
-						class="mb-4 h-80 w-80 rounded-lg object-contain"
-					/>
-					<h3 class="mt-auto text-center text-sm font-semibold sm:text-lg">
-						{item.name.length > 100 ? `${item.name.substring(0, 40)}...` : item.name}
-					</h3>
+					<a href={`/catalog/${item.id}`}>
+						<img
+							src={`https://back.boo.ua/${item.imageMain}`}
+							alt={item.name}
+							class="mb-4 h-80 w-80 rounded-lg object-contain"
+						/>
+						<h3 class="mt-auto text-center text-sm font-semibold sm:text-lg">
+							{item.name.length > 100 ? `${item.name.substring(0, 40)}...` : item.name}
+						</h3>
+					</a>
 				</div>
 			{/each}
 		</div>

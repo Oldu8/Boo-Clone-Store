@@ -1,20 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	// Props
 	export let separator: string = '/';
 	export let basePath: string = '';
 
-	// Breadcrumbs array
 	let breadcrumbs: { name: string; path: string }[] = [];
 
 	// Parse URL and generate breadcrumbs
 	const generateBreadcrumbs = () => {
-		// Get the current path
 		const path = window.location.pathname.replace(basePath, '');
 		const segments = path.split('/').filter(Boolean);
 
-		// Generate breadcrumb paths
 		breadcrumbs = segments.map((segment, index) => {
 			const path = '/' + segments.slice(0, index + 1).join('/');
 			return { name: decodeURIComponent(segment), path };
