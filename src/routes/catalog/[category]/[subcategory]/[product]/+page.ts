@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types'; // Use correct import path
-export const ssr = false;
+export const ssr = true;
 
 export const load: PageLoad = async ({ params, fetch }) => {
 	const categoryId = params.product; // Ensure this is the correct dynamic param
