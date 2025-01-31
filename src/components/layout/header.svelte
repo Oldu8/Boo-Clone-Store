@@ -6,7 +6,7 @@
 	import { cartCount, selectedLanguage } from '@/routes/store';
 
 	let searchQuery = '';
-	let isMobileMenuOpen = false; // State for mobile menu dropdown
+	let isMobileMenuOpen = false;
 
 	const handleSearch = () => {
 		if (searchQuery.trim() !== '') {
@@ -27,7 +27,6 @@
 		selectedLanguage.set(target.value);
 	}
 
-	// Function to toggle mobile menu
 	const toggleMobileMenu = () => {
 		isMobileMenuOpen = !isMobileMenuOpen;
 	};
@@ -38,7 +37,9 @@
 		class="mx-auto flex max-w-[1200px] flex-row flex-nowrap items-center justify-between gap-4 p-4"
 	>
 		<span>
-			<img src={logo} alt="Logo" class="h-10 w-auto" />
+			<a href="/">
+				<img src={logo} alt="Logo" class="h-10 w-auto" />
+			</a>
 		</span>
 
 		<div class="hidden md:flex md:items-center md:gap-4">
@@ -96,7 +97,6 @@
 		</div>
 
 		<div class="flex items-center gap-4 md:hidden">
-			<!-- Cart Icon -->
 			<a class="flex cursor-pointer items-center gap-2" href="/cart">
 				<div class="relative">
 					<img src={CartIcon} alt="Cart Icon" class="h-6 w-6" />
