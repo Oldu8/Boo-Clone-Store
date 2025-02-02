@@ -10,7 +10,6 @@
 
 	let cartCount = 0;
 
-	// Update cart count dynamically
 	$: cartItems.subscribe((items) => {
 		cartCount = items.length;
 	});
